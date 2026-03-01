@@ -1,0 +1,273 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  width: 100%;
+  background-color: #2bb6e9;
+  padding: 15px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo span {
+  color: #0077ff;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+.profile {
+  position: relative;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+}
+
+.profile-btn img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+/* Dropdown hidden by default */
+.profile-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+/* Show dropdown when active */
+.profile-dropdown.active {
+  display: block;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: gray;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.hero-text h1 span { color: #0a6cff; }
+
+.tagline {
+    margin: 10px 0 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Typing text */
+#typing-text {
+    font-size: 24px;
+    color: #0a6cff;
+    min-height: 60px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup {
+    background: #000;
+    color: #fff;
+}
+
+.predict {
+    background: #2bb6e9;
+    color: #fff;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+  max-width: 500px;
+  animation: floatIn 1.2s ease-out;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+/* Image animation */
+@keyframes floatIn {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  width: 100%;
+  background-color: #2bb6e9;
+  color: #000;
+  padding: 40px 60px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li::before {
+  content: "• ";
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 900px) {
+  .hero {
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    display: none; /* mobile menu later */
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h2 {
+    font-size: 24px;
+  }
+}

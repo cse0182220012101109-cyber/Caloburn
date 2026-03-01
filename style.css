@@ -1,0 +1,167 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body{
+  background:#f3f6fb;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.page{
+  width:100%;
+  max-width:700px;
+  padding:20px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.brand{
+  font-size:32px;
+  font-weight:700;
+  color:#333;
+}
+
+.brand-blue{
+  color:#1e90ff;
+}
+
+.subtitle{
+  font-size:14px;
+  color:#666;
+}
+
+.card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.fields{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+.field{
+  padding:12px 14px;
+  font-size:14px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+.field:focus{
+  border-color:#1e90ff;
+}
+
+.model-row{
+  margin-top:16px;
+}
+
+.model-label{
+  font-size:13px;
+  color:#555;
+  margin-bottom:6px;
+}
+
+.model-select{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+.submit-btn{
+  margin-top:18px;
+  width:100%;
+  padding:12px;
+  background:#1e90ff;
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  background:#1675cc;
+}
+
+.submit-btn:disabled{
+  background:#aaa;
+  cursor:not-allowed;
+}
+
+.prediction-area{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px dashed #ccc;
+  text-align:center;
+}
+
+.pred-label{
+  font-size:16px;
+  font-weight:600;
+  color:#333;
+}
+
+#prediction{
+  color:#1e90ff;
+  font-size:22px;
+  font-weight:700;
+  margin:0 4px;
+}
+
+.cal{
+  font-size:14px;
+  color:#555;
+}
+
+.accuracy{
+  margin-top:10px;
+  font-size:14px;
+  color:#444;
+}
+
+/* ============================= */
+/* METRIC EXPLANATION STYLES */
+/* ============================= */
+
+.explanations{
+  margin-top:18px;
+  text-align:left;
+}
+
+.exp{
+  font-size:14px;
+  margin:8px 0;
+  line-height:1.6;
+}
+
+/* MAE explanation */
+.mae{
+  color:#e67e22; /* orange */
+}
+
+/* RMSE explanation */
+.rmse{
+  color:#16a085; /* teal */
+}
+
+/* R2 explanation */
+.r2{
+  color:#2c3e50; /* dark blue */
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CaloBurn | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">Calo<span>Burn</span></a>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Prediction History</a>
+            <a href="#">About Site</a>
+            <a href="#">Sign in</a>
+        </div>
+
+        <!-- Profile dropdown  -->
+         
+        <!-- Profile Button -->
+        <div class="profile">
+            <button class="profile-btn" id="profileToggle">
+                <img src="assets/profile.png" alt="Profile">
+            </button>
+
+            <!-- Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <img src="assets/profile.png" class="profile-img" alt="Profile">
+                <p class="profile-name">Demo User</p>
+                <p class="profile-email">demo@caloburn.com</p>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+
+        <!-- Hero text -->
+        <div class="hero-text">
+            <h1>Calo<span>Burn</span></h1>
+            <p class="tagline">A Machine Learning based Prediction System</p>
+
+            <!-- Typing animation text -->
+            <h2 id="typing-text"></h2>
+
+            <div class="hero-buttons">
+                <button class="btn signup">Sign Up</button>
+                <a href="../index.html" class="btn predict">Start Predicting</a>
+            </div>
+        </div>
+
+        <!-- Hero image -->
+        <div class="hero-image">
+            <img src="assets/calorie burn hero section.png" alt="ML Workout Illustration">
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-col">
+                <h3>CaloBurn</h3>
+                <p>ML based Calorie Burn<br>Prediction System</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Features</h4>
+                <ul>
+                    <li>ML-powered prediction</li>
+                    <li>Model-wise calorie prediction</li>
+                    <li>Prediction history</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Disclaimer</h4>
+                <p>Educational use only.<br>Not medical advice.</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2025 CaloBurn. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

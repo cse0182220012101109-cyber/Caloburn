@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CaloBurn - Predict Calories Burned</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="landing/home.css"/>
+</head>
+
+<body>
+        <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <a href="landing/home.html" class="logo">Calo<span>Burn</span></a>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Prediction History</a>
+            <a href="#">About Site</a>
+            <a href="#">Sign in</a>
+        </div>
+
+        <!-- Profile dropdown  -->
+         
+        <!-- Profile Button -->
+        <div class="profile">
+            <button class="profile-btn" id="profileToggle">
+                <img src="landing/assets/profile.png" alt="Profile">
+            </button>
+
+            <!-- Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <img src="landing/assets/profile.png" class="profile-img" alt="Profile">
+                <p class="profile-name">Demo User</p>
+                <p class="profile-email">demo@caloburn.com</p>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <main class="page">
+        <header class="header">
+            <h1 class="brand">Calo<span class="brand-blue">Burn</span></h1>
+            <p class="subtitle">Predict calory burn during Workout using ML Models</p>
+        </header>
+
+        <section class="card">
+            <form id="predictForm" onsubmit="return handleSubmit(event)" autocomplete="off">
+
+                <div class="fields">
+                    <input id="gender" class="field" type="number"
+                        placeholder="Enter Gender (1 = Male, 0 = Female)"
+                        min="0" max="1" step="1" />
+
+                    <input id="age" class="field" type="number"
+                        placeholder="Enter Age" min="0" step="1" />
+
+                    <input id="height" class="field" type="number"
+                        placeholder="Enter Height (cm)" min="0" step="any" />
+
+                    <input id="weight" class="field" type="number"
+                        placeholder="Enter Weight (kg)" min="0" step="any" />
+
+                    <input id="duration" class="field" type="number"
+                        placeholder="Enter Workout Duration (minutes)" min="0" step="any" />
+
+                    <input id="heart_rate" class="field" type="number"
+                        placeholder="Enter Heart Rate (BPM)" min="0" step="any" />
+
+                    <input id="body_temp" class="field" type="number"
+                        placeholder="Enter Body Temperature (°C)" min="0" step="any" />
+                </div>
+
+                <div class="model-row">
+                    <div class="model-label">Select a ML Model</div>
+                    <select id="modelSelect" class="model-select">
+                        <option value="linear_model">Linear Regression</option>
+                        <option value="ridge_model">Ridge Regression</option>
+                        <option value="lasso_model">Lasso Regression</option>
+                        <option value="svr_model">SVR</option>
+                        <option value="random_forest_model" selected>Random Forest</option>
+                        <option value="gradient_boosting_model">Gradient Boosting</option>
+                        <option value="xgboost_model">XGBoost</option>
+                    </select>
+                </div>
+
+                <button id="submitBtn" class="submit-btn" type="submit">SUBMIT</button>
+            </form>
+
+            <div class="prediction-area">
+                <div class="pred-label">
+                    Predicted Burned Calories :
+                    <span id="prediction">0.00</span>
+                    <span class="cal">Cal</span>
+                </div>
+
+                <div class="accuracy">
+                    Model overall  Performance:
+                    <span id="accuracy">—</span>
+                </div>
+
+                <!-- NEW EXPLANATION AREA -->
+                <div class="explanations">
+                    <p id="maeExplain" class="exp mae"></p>
+                    <p id="rmseExplain" class="exp rmse"></p>
+                    <p id="r2Explain" class="exp r2"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-col">
+                <h3>CaloBurn</h3>
+                <p>ML based Calorie Burn<br>Prediction System</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Features</h4>
+                <ul>
+                    <li>ML-powered prediction</li>
+                    <li>Model-wise calorie prediction</li>
+                    <li>Prediction history</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Disclaimer</h4>
+                <p>Educational use only.<br>Not medical advice.</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2025 CaloBurn. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="landing/home.js"></script>
+</body>
+
+</html>
